@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Flexible Techniques for Differentiable Rendering with 3D Gaussians"
-date:   2023-08-28 22:21:59 +00:00
+title:  "Investigating the Shear and Thermal Properties of Additively Manufactured Wood-Pla Biocomposites"
+date:   2024-12-28 22:21:59 +00:00
 image: /images/3dgaussian.jpg
 categories: research
 author: "Md Miraj Arefin"
