@@ -80,8 +80,8 @@
               <br>
               <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
               <br>
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
+              {% if post.pre-print %}
+              <a href="{{post.arxiv}}">pre-print</a> /
               {% endif %}
               {% if post.video %}
               <a href="{{post.video}}">video</a> /
@@ -125,7 +125,7 @@
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
-          {% if cat == 'Intel' %}
+          {% if cat == 'project' %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
