@@ -2,7 +2,7 @@
 layout: post
 title:  "Thermodynamic Analysis of Cascade Refrigeration System using Low GWP Refrigerants for Low-Temperature Application"
 date:   2024-09-21 22:21:59 +00:00
-image: /images/CRS.png
+image: /images/crs.png
 categories: Research
 author: "Md Miraj Arefin"
 authors: "<strong>Md Miraj Arefin</strong>, Dipayan Mondal, Md. Ashraful Islam"
