@@ -2,7 +2,7 @@
 layout: post
 title:  "Fixed Wing VTOL for Emergency Medical Vaccine Supply"
 date:   2024-03-01 22:21:59 +00:00
-image: /images/pairwise.png
+image: /images/vtol2_1.jpg
 categories: Project
 author: "Md Miraj Arefin"
 authors: "<strong>Md Miraj Arefin</strong>, Dr. Md Ashraful Islam"
