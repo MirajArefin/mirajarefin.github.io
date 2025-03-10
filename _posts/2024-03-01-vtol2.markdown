@@ -1,7 +1,7 @@
 ---
 layout: post
 page_title:  "Fixed Wing VTOL for Emergency Medical Vaccine Supply"
-page_dir: vtol2.html
+page_dir: /vtol2.html
 date:   2024-03-01 22:21:59 +00:00
 image: /images/vtol2.gif
 categories: Project
