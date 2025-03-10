@@ -133,10 +133,10 @@
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
               <br>
-              <em>{{post.categories}} {{post.course}}</em>
+              {{post.authors}}
               <br>
-              {{ post.date | date: "%Y-%m-%d" }}
-              <be>
+              <em>{{post.categories}} {{post.course}}</em>  |  {{ post.date | date: "%Y-%m-%d" }}
+              <br>
               {% if post.funded %}
                 {{ post.funded }}
               <br>
