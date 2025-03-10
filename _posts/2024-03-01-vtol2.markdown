@@ -8,6 +8,6 @@ categories: Project
 author: "Md Miraj Arefin"
 authors: "<strong>Md Miraj Arefin</strong>, Dr. Md Ashraful Islam"
 funded: Funded by University Grant Commission, Bangladesh
-website: https://mirajarefin.github.io/vtol-ash
+website: https://mirajarefin.github.io/vtol2.html
 ---
 Designed and constructed a hybrid fixed-wing VTOL aircraft having a take-off weight of 8kg.
