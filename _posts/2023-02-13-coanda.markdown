@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Transforming UAV Design: Coandă-Based Lift Generation for Enhanced Aerial Performance"
+date:   2023-02-13 22:21:59 +00:00
+image: /images/coanda.png
+categories: research
+author: "Md Miraj Arefin"
+authors: "Nazmus Saadat Mooaz, <strong>Md Miraj Arefin</strong>, Suchinto Roy Dhrubo, Ashfaq Ahmed"
+venue: "6th International Conference on Electrical Information and Communication Technology (EICT)"
+paper: https://doi.org/10.1109/EICT61409.2023.10427637
+---
+Designed and constructed a UAV based on the Coandă effect.
