@@ -1,15 +1,12 @@
 ---
 layout: post
-title:  "Fuzzy Metaballs: Approximate Differentiable Rendering with Algebraic Surfaces"
-date:   2022-07-21 22:21:59 +00:00
-image: /images/fuzzy22.png
-categories: research
-author: "Leo Keselman"
-authors: "<strong>Leonid Keselman</strong>, Martial Hebert"
-venue: "European Conference on Computer Vision (Oral)"
-arxiv: https://arxiv.org/abs/2207.10606
-code: https://github.com/leonidk/fuzzy-metaballs
-website: https://leonidk.github.io/fuzzy-metaballs/
-youtube: https://www.youtube.com/watch?v=Ec7cxEc9eOU
+title:  "Thermodynamic Analysis of Cascade Refrigeration System using Low GWP Refrigerants for Low-Temperature Application"
+date:   2024-09-21 22:21:59 +00:00
+image: /images/CRS.png
+categories: Research
+author: "Md Miraj Arefin"
+authors: "<strong>Md Miraj Arefin</strong>, Dipayan Mondal, Md. Ashraful Islam"
+venue: "Energy Conversion and Management: X"
+paper: https://doi.org/10.1016/j.ecmx.2024.100722
 ---
-An approximate differentiable renderer for a compact, interpretable representation, which we call Fuzzy Metaballs. Our approximate renderer focuses on rendering shapes via depth maps and silhouettes. It sacrifices fidelity for utility, producing fast runtimes and high-quality gradient information that can be used to solve vision tasks.
+We conducted a comprehensive thermodynamic analysis of a cascade refrigeration system for low-temperature applications, focusing on the use of low-GWP and zero-ODP refrigerants to improve efficiency and sustainability. 
