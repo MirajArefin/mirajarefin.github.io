@@ -136,7 +136,9 @@
               <em>{{post.categories}} {{post.course}}</em>
               <br>
               {{ post.date | date: "%Y-%m-%d" }}
-
+              <be>
+              {% if post.funded %}
+                {{ post.funded }}
               <br>
               {% if post.website %}
               <a href="{{post.website}}">website</a> /
