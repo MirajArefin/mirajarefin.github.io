@@ -6,6 +6,6 @@ image: /images/mars-rover.png
 categories: Project
 author: "Md Miraj Arefin"
 authors: "Role: Software Sub-Team Lead"
-website: https://www.youtube.com/@teamdurbar419
+website: https://mirajarefin.github.io/pages/durbar.html
 ---
 Designed and built the rover using the rocker-bogie mechanism. Led the control system and software sub-team to develop and implement the drive system for the rover.

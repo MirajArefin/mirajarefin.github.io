@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Flash Graphene Synthesis in Bulk Quantity"
+date:   2022-03-01 21:21:53 +00:00
+image: /images/graphene_2.png
+categories: Project
+author: "Md Miraj Arefin"
+authors: "<strong>Md Miraj Arefin</strong>, Dr. Md Abdullah Al-Bari"
+website: https://mirajarefin.github.io/pages/graphene.html
+---
+Built a setup for flash graphene synthesis.
