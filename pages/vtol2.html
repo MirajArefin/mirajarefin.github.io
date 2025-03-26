@@ -29,174 +29,59 @@
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr style="padding:0px;vertical-align:middle;">
+            <h1 style="text-align: center;">
+              Fixed Wing VTOL for Emergency Medical Vaccine Supply
+            </h1>
+          </tr>
+
           <tr style="padding:0px">
-            <td style="padding:2.5%;width:60%;vertical-align:middle">
-              <h1>
-               Md Miraj Arefin
-              </h1>
-              <p>I am a prospective MS/PhD student. 
-              </p>
-              <p>
-                I have a BS in Mechanical Engineering from <a href="https://www.kuet.ac.bd/">Khulna University of Engineering & Technology, Bangladesh</a>, where I worked as a research assistant under the supervision of <a href="https://me.kfupm.edu.sa/people/faculty/faculty-details/dr.-bari--md-abdullah-al">Dr. Md Abdullah Al Bari</a> and <a href="https://www.kuet.ac.bd/me/ashraf_mech">Dr. Md. Ashraful Islam</a>
-              </p>
-              <p style="text-align:center">
-                <a target="_blank" href="https://mailhide.io/e/H1c3BeoW"> Email</a> &nbsp;/&nbsp;
-                <a href="/pdfs/MirajArefin_CV.pdf">CV</a> &nbsp;/&nbsp;
-                <a href="https://github.com/MirajArefin">GitHub</a> &nbsp;/&nbsp;
-                <a href="https://scholar.google.com/citations?user=yoGoqyAAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
-                <a href="https://www.linkedin.com/in/mirajarefin"> LinkedIn </a>
-              </p>
+            <td style="padding:2.5%;width:50%;vertical-align:middle">
+              <img style="width:100%;max-width:100%" alt="vtol photo" src="images/vtol2_1.JPG">
             </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="images/miraj.jpg">
+            <td style="padding:2.5%;width:50%;vertical-align:middle">
+              <img style="width:100%;max-width:100%" alt="vtol photo" src="images/vtol2_1.JPG">
             </td>
           </tr>
+          
         </table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Research</h2>
-              <p>
-                I'm interested in Robotics, machine learning, and control. 
-              </p>
+            <td>
+              <p style="text-align: center;"><i>Fig. 1. Design of the UAV in SolidWorks</i></p>
             </td>
           </tr>
         </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'Research' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <br>
-              {{post.authors}}
 
-              <br>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
-              <br>
-              {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
-              {% endif %}
-              {% if post.pre-print %}
-              <a href="{{post.pre-print}}">pre-print</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.youtube %}
-              <a href="{{post.youtube}}">youtube</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <br>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Projects</h2>
-              <p> Here's a glimpse of my projects
-              </p>
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <p><strong>Project Supervisor:</strong> Dr. Md. Ashraful Islam, Professor, Khulna University of Engineering &
+Technology, Bangladesh.</p>
+            
+            <p><strong>Timeline:</strong> September 2023 – March 2024</p>
+            
+          <p><strong>About Project:</strong> My supervisor secured a research grant from the University Grants Commission
+            (UGC) of Bangladesh for this project, and I was selected as a research assistant due to my prior
+            experience in the field.</p>
 
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'Project' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <br>
-              {{post.authors}}
-              <br>
-              <em>{{post.categories}} {{post.course}}</em>  |  {{ post.date | date: "%Y-%m-%d" }}
-              <br>
-              {% if post.funded %}
-                {{ post.funded }}
-              {% endif %}
-              <br>
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
-              {% endif %}
-              {% if post.patent %}
-              <a href="{{post.patent}}">patent</a> /
-              {% endif %}
-              {% if post.patent2 %}
-              <a href="{{post.patent2}}">patent #2</a> /
-              {% endif %}
-              {% if post.patent3 %}
-              <a href="{{post.patent3}}">patent #3</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.video2 %}
-              <a href="{{post.video2}}">video #2</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
+            <p style="text-align: justify;">
+              The UAV was designed using SolidWorks 2023 and Blender3D, as shown in Fig. 1. The vehicle
+features a modular structure, allowing for easy disassembly and transportation. Its wings, fuselage,
+tail, and rudders can be individually detached. The frame was constructed using carbon fiber rods
+and plywood, with the plywood components cut into shape using a laser cutter. All mounting parts
+were 3D-printed using PLA, while the outer surface was made from Depron sheets. </p>
+            <p style="text-align: justify;">
+The initial version of the UAV encountered several design issues, which were addressed before its
+test flight (Fig. 2). The vehicle successfully took off in both stabilize and GPS-guided modes,
+reaching an altitude of approximately 30 meters in VTOL mode. It then transitioned smoothly into
+fixed-wing flight and landed in VTOL mode (video). The total flight time was about 5 minutes,
+entirely in VTOL mode.
+            </p>
           </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
         </table>
-        <br>
-        <br>
-        <br>
         
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:center;font-size:small;">
-                Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
-              </p>
-            </td>
-          </tr>
-        </table>
       </td>
     </tr>
   </table>
