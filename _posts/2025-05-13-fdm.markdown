@@ -6,7 +6,7 @@ image: /images/fdm.png
 categories: Research
 author: "Md Miraj Arefin"
 authors: "Md Mahbub Morshed Haque, Suchinto Roy Dhrubo, Al-Fida Zubayer Pranto, Akash Ahmed, <strong>Md Miraj Arefin</strong>, Md Arifuzzaman, Md Shariful Islam"
-pre-print: https://doi.org/10.1016/j.hybadv.2025.100502
+paper: https://doi.org/10.1016/j.hybadv.2025.100502
 
 ---
 
