@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Tissue Stiffness Predictive Admittance Control for Robot-Assistive Ultrasound Imaging"
+date:   2026-07-22 22:21:59 +00:00
+image: /images/erc.png
+categories: Research
+author: "Md Miraj Arefin"
+authors: "<strong>Md Miraj Arefin</strong>, Mehmet Efe Tiryaki"
+venue: "7th Turkish Robotics Conference, July 20-21, 2026, Istanbul, Turkey"
+poster: /pdfs/koc_poster_2026.pdf
+# project_page: https://mirajarefin.github.io/pages/trc26.html
+---

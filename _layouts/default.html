@@ -2,12 +2,10 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TFD6RD5X"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-B8TFD6RD5X');
@@ -21,27 +19,36 @@
 
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css">
 
 </head>
 
 <body>
-  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <table
+    style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table
+          style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr style="padding:0px">
             <td style="padding:2.5%;width:60%;vertical-align:middle">
               <h1>
-               Md Miraj Arefin
+                Md Miraj Arefin
               </h1>
-              <p>I am currently pursuing my MS degree in Robotics at Middle East Technical University, Turkey. I am working as a graduate research assistant (GRA) at <a href="https://mrs-me.metu.edu.tr/">Medical Robotic Systems Lab</a> under the supervision of <a href="https://me.metu.edu.tr/kisi/mehmet-efe-tiryaki">Dr. Mehmet Efe Tiryaki</a>. My research is focused on the "Robotic Ultrasound Imaging (RUSS)" system.  
+              <p>I am currently pursuing my MS degree in Robotics at Middle East Technical University, Turkey. I am
+                working as a graduate research assistant (GRA) at <a href="https://mrs-me.metu.edu.tr/">Medical Robotic
+                  Systems Lab</a> under the supervision of <a href="https://me.metu.edu.tr/kisi/mehmet-efe-tiryaki">Dr.
+                  Mehmet Efe Tiryaki</a>. My research is focused on the "Robotic Ultrasound System (RUSS)".
               </p>
               <p>
-                I have a BS in Mechanical Engineering from <a href="https://www.kuet.ac.bd/">Khulna University of Engineering & Technology, Bangladesh</a>, where I worked as a research assistant under the supervision of <a href="https://me.kfupm.edu.sa/people/faculty/faculty-details/dr.-bari--md-abdullah-al">Dr. Md Abdullah Al Bari</a> and <a href="https://www.kuet.ac.bd/me/ashraf_mech">Dr. Md. Ashraful Islam</a>
+                I have a BS in Mechanical Engineering from <a href="https://www.kuet.ac.bd/">Khulna University of
+                  Engineering & Technology, Bangladesh</a>, where I worked as a research assistant under the supervision
+                of <a href="https://me.kfupm.edu.sa/people/faculty/faculty-details/dr.-bari--md-abdullah-al">Dr. Md
+                  Abdullah Al Bari</a> and <a href="https://www.kuet.ac.bd/me/ashraf_mech">Dr. Md. Ashraful Islam</a>
               </p>
               <p>
-                <h3> Research Interests: </h3> Robot Learning, Manipulation Planning, Physical AI
+              <h3> Research Interests: </h3> Robot Learning, Manipulation Planning, Physical AI
               </p>
               <p style="text-align:center">
                 <a target="_blank" href="https://mailhide.io/e/H1c3BeoW"> Email</a> &nbsp;|&nbsp;
@@ -57,17 +64,19 @@
           </tr>
         </table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table
+          style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Research</h2>
               <p>
-                I'm interested in Robotics, AI, and control. 
+                I'm interested in Robotics, AI, and control.
               </p>
             </td>
           </tr>
         </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table
+          style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
@@ -85,28 +94,31 @@
               <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
               <br>
               {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> | 
+              | <a href="{{post.paper}}">paper</a> |
               {% endif %}
               {% if post.pre-print %}
-              <a href="{{post.pre-print}}">pre-print</a> | 
+              | <a href="{{post.pre-print}}">pre-print</a> |
               {% endif %}
               {% if post.video %}
-              <a href="{{post.video}}">video</a> | 
+              | <a href="{{post.video}}">video</a> |
               {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> | 
+              {% if post.github %}
+              | <a href="{{post.github}}">github</a> |
               {% endif %}
               {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> | 
+              | <a href="{{post.poster}}">poster</a> |
               {% endif %}
               {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> | 
+              | <a href="{{post.slides}}">slides</a> |
               {% endif %}
               {% if post.website %}
-              <a href="{{post.website}}">website</a> | 
+              | <a href="{{post.website}}">website</a> |
+              {% endif %}
+              {% if post.project_page %}
+              | <a href="{{post.project_page}}">project page</a> |
               {% endif %}
               {% if post.youtube %}
-              <a href="{{post.youtube}}">youtube</a> | 
+              | <a href="{{post.youtube}}">youtube</a> |
               {% endif %}
               <p></p>
               {{ post.excerpt }}
@@ -119,7 +131,8 @@
         <br>
         <br>
         <br>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table
+          style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Projects</h2>
@@ -128,7 +141,8 @@
             </td>
           </tr>
         </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table
+          style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
           {% for post in site.posts %}
           {% for cat in post.categories %}
@@ -139,46 +153,47 @@
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>
-              {{post.title}}
+                {{post.title}}
               </h3>
+              <!-- <br>
+              {{post.authors}} -->
               <br>
-              {{post.authors}}
-              <br>
-              <em>{{post.categories}} {{post.course}}</em>  |  {{ post.date | date: "%Y-%m-%d" }}
+              <em>{{post.categories}} {{post.course}}</em> | {{ post.date | date: "%Y-%m-%d" }}
               <br>
               {% if post.funded %}
-                {{ post.funded }}
-              {% endif %}
+              {{ post.funded }}
               <br>
+              {% endif %}
+              <!-- <br> -->
               {% if post.website %}
-              <a href="{{post.website}}">website</a> | 
+              | <a href="{{post.website}}">website</a> |
               {% endif %}
               {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> | 
+              | <a href="{{post.paper}}">paper</a> |
               {% endif %}
               {% if post.patent %}
-              <a href="{{post.patent}}">patent</a> | 
+              | <a href="{{post.patent}}">patent</a> |
               {% endif %}
               {% if post.patent2 %}
-              <a href="{{post.patent2}}">patent #2</a> | 
+              | <a href="{{post.patent2}}">patent #2</a> |
               {% endif %}
               {% if post.patent3 %}
-              <a href="{{post.patent3}}">patent #3</a> | 
+              | <a href="{{post.patent3}}">patent #3</a> |
               {% endif %}
               {% if post.video %}
-              <a href="{{post.video}}">video</a> | 
+              | <a href="{{post.video}}">video</a> |
               {% endif %}
               {% if post.video2 %}
-              <a href="{{post.video2}}">video #2</a> | 
+              | <a href="{{post.video2}}">video #2</a> |
               {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> | 
+              {% if post.github %}
+              | <a href="{{post.github}}">github</a> |
               {% endif %}
               {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> | 
+              | <a href="{{post.poster}}">poster</a> |
               {% endif %}
               {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> | 
+              | <a href="{{post.slides}}">slides</a> |
               {% endif %}
               <p></p>
               {{ post.excerpt }}
@@ -191,14 +206,16 @@
         <br>
         <br>
         <br>
-        
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+        <table
+          style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:0px">
               <br>
               <p style="text-align:center;font-size:small;">
-                Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
+                Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's
+                  website</a>
               </p>
             </td>
           </tr>
@@ -209,4 +226,3 @@
 </body>
 
 </html>
-
