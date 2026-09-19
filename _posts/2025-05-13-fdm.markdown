@@ -4,8 +4,8 @@ title:  "Impact of Process Parameters and Material Selection on the Mechanical P
 date:   2025-05-13 22:21:59 +00:00
 image: /images/fdm.png
 categories: Research
-author: "Md Miraj Arefin"
 authors: "Md Mahbub Morshed Haque, Suchinto Roy Dhrubo, Al-Fida Zubayer Pranto, Akash Ahmed, <strong>Md Miraj Arefin</strong>, Md Arifuzzaman, Md Shariful Islam"
+venue: "Hybrid Advances, 2025"
 paper: https://doi.org/10.1016/j.hybadv.2025.100502
 
 ---

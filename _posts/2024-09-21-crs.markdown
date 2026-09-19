@@ -4,9 +4,7 @@ title:  "Thermodynamic Analysis of Cascade Refrigeration System using Low GWP Re
 date:   2024-09-21 22:21:59 +00:00
 image: /images/crs.png
 categories: Research
-author: "Md Miraj Arefin"
 authors: "<strong>Md Miraj Arefin</strong>, Dipayan Mondal, Md. Ashraful Islam"
-venue: "Energy Conversion and Management: X"
+venue: "Energy Conversion and Management: X, 2024"
 paper: https://doi.org/10.1016/j.ecmx.2024.100722
 ---
-We conducted a comprehensive thermodynamic analysis of a cascade refrigeration system for low-temperature applications, focusing on the use of low-GWP and zero-ODP refrigerants to improve efficiency and sustainability. 

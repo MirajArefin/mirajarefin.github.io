@@ -5,6 +5,7 @@ date:   2026-03-18 22:21:59 +00:00
 image: /images/bio-composite.png
 categories: Research
 authors: "Md. Fazlay Rabbi, Rahul Sarker, Jack Becker, Asifur Rahman Badsha, <strong> Miraj Arefin</strong>, Israt Zahan, Md Arifuzzaman, Md Abdullah Al Bari & Md Golam Kibria"
+venue: "Journal of Natural Fibers, 2026"
 paper: https://doi.org/10.1080/15440478.2026.2640270
 
 ---
