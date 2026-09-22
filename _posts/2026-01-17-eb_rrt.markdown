@@ -7,4 +7,4 @@ categories: Project
 author: "Md Miraj Arefin"
 github: https://github.com/MirajArefin/EB-RRT_mobile
 ---
-CENG786 Final Project
+Partial Implementation of the Paper "EB-RRT: Optimal Motion Planning for Mobile Robots" as CENG786 Final Project

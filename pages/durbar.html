@@ -1,103 +1,318 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Md Miraj Arefin">
+  <meta name="description"
+    content="Design and development of Team Durbar’s KUET Mars rover for the University Rover Challenge, featuring rocker-bogie mobility, a manipulator arm, and onboard environmental testing.">
+  <title>KUET Mars Rover (Team Durbar) | Md Miraj Arefin</title>
+  <link rel="canonical" href="https://mirajarefin.github.io/pages/durbar.html">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700|Noto+Sans:400,600,700&amp;display=swap"
+    rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-E00L9PT3V9');
   </script>
-  <title>Miraj Arefin</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    body {
+      margin: 0;
+      color: #4a4a4a;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
 
-  <meta name="author" content="{{ site.name }}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    a {
+      color: #209cee;
+      text-decoration: none;
+    }
 
-  <link rel="stylesheet" type="text/css" href="/style.css" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    a:hover {
+      text-decoration: underline;
+    }
 
+    a:focus-visible {
+      outline: 3px solid #00a398;
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(100% - 3rem, 960px);
+      margin-inline: auto;
+    }
+
+    .hero {
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    h1,
+    .project-authors {
+      font-family: 'Google Sans', sans-serif;
+    }
+
+    h1 {
+      margin: 0 0 1.5rem;
+      color: #363636;
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 1.125;
+      overflow-wrap: break-word;
+    }
+
+    .project-authors {
+      margin: 0 0 .75rem;
+      font-size: 1.25rem;
+    }
+
+    .supervisor {
+      max-width: 760px;
+      margin: 0 auto .75rem;
+    }
+
+    .timeline {
+      margin: 0;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .5rem;
+      margin-top: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: .5rem 1.25rem;
+      border-radius: 999px;
+      background: #363636;
+      color: #fff;
+    }
+
+    .button:hover {
+      background: #292929;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 3rem 0;
+    }
+
+    .content {
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    h2 {
+      color: #363636;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.3;
+      text-align: center;
+      margin: 0 0 1.5rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    .experiment {
+      padding-top: 3.5rem;
+    }
+
+    .experiment h2 {
+      font-size: 1.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .experiment h2::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      margin: 1.25rem auto 0;
+      background: #00a398;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+      align-items: start;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      margin-top: 1rem;
+      font-size: .95rem;
+      text-align: center;
+    }
+
+    .specifications {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      padding: 1.5rem 0;
+      margin: 2rem 0;
+      border-block: 1px solid #e5e5e5;
+      text-align: center;
+    }
+
+    .specifications dt {
+      font-size: .875rem;
+    }
+
+    .specifications dd {
+      margin: .5rem 0 0;
+      color: #363636;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 1.5rem;
+      background: #fafafa;
+      text-align: center;
+      font-size: .875rem;
+    }
+
+    footer p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 2.5rem 0 1.5rem;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      main {
+        padding: 2rem 0;
+      }
+
+      .experiment {
+        padding-top: 2.5rem;
+      }
+
+      .experiment h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .gallery,
+      .specifications {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr style="padding:0px;vertical-align:middle;">
-            <h1 style="text-align: center;">
-                KUET Mars Rover (Team Durbar) 
-            </h1>
-            <p><strong>Project Supervisor:</strong> Dr. Md. Helal-An-Nahiyan, Khulna University of Engineering &
-              Technology, Bangladesh.</p>
-                          
-            <p><strong>Timeline:</strong> March 2019 - April 2023</p>
-                          
-            <p style="text-align: justify;"><strong>About Project:</strong> The goal of this project was to build a rover for Univeristy Rover Challenge
-                (URC). This was a team project. I was the founding member of the team.</p>
-          </tr>
-
-          <tr style="padding:0px">
-            <td style="padding:1.5%;width:50%;vertical-align:middle">
-              <img style="width:100%;max-width:100%" alt="durbar_1.png" src="/images/durbar_1.png">
-            </td>
-            <td style="padding:1.5%;width:50%;vertical-align:middle">
-              <img style="width:100%;max-width:100%" alt="durbar_2.png" src="/images/durbar_2.png">
-            </td>
-          </tr>
-          
-        </table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td>
-              <p style="text-align: center;"><i>Fig. 1 Rover</i></p>
-            </td>
-          </tr>
-        </table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <p style="text-align: justify;">
-                The rover's body was constructed from stainless steel square pipes, with a rocker-bogie mechanism
-                enabling it to navigate rough terrain. Four high-torque motors were used to drive the rover's
-                custom-made wheels, which were covered with rubber tires for enhanced traction. The arm, cut
-                from aluminum sheets using a CNC machine, can be controlled via both a radio transmitter and a
-                base computer. It is capable of lifting up to 5 kg, using linear actuators as its primary mechanism.</p>
-            <p style="text-align: justify;">
-                The rover's drivetrain and arm were controlled by an Arduino Mega, while a Raspberry Pi served
-                as the master controller, handling decision-making and path planning. Communication was
-                facilitated through omnidirectional antennas. Additionally, the rover features an in-situ testing
-                unit, capable of autonomously analyzing soil and air properties.
-            </p>
-            <p style="text-align: justify;">
-                My contribution:
-                <ul>
-                    <li> Led the design and building the rover using the rocker-bogie mechanism.</li>
-                    <li>Led the control system and software sub-team to develop and implement the drive system for the rover.</li>
-                    <li> Designed and constructed a manipulator arm capable of lifting over 5 kg.</li>
-                </ul>
-            </p>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:center;font-size:small;">
-                Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
-              </p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+  <header class="hero">
+    <div class="container">
+      <h1>KUET Mars Rover (Team Durbar)</h1>
+      <p class="project-authors"><a href="/">Md Miraj Arefin</a></p>
+      <p class="supervisor"><strong>Project Supervisor:</strong> Dr. Md. Helal-An-Nahiyan<br>
+        Khulna University of Engineering &amp; Technology, Bangladesh</p>
+      <p class="timeline">March 2019 &ndash; April 2023</p>
+      <nav class="project-links" aria-label="Project sections">
+        <a class="button" href="#overview">Overview</a>
+        <a class="button" href="#rover-design">Rover Design</a>
+        <a class="button" href="#control-system">Control System</a>
+        <a class="button" href="#contributions">My Contributions</a>
+        <a class="button" href="#video">Video</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <div class="content">
+      <section aria-labelledby="overview">
+        <h2 id="overview">Overview</h2>
+        <p>Team Durbar was formed to build a Mars rover for the University Rover Challenge (URC).
+          As a founding member, I helped develop the rover at Khulna University of Engineering
+          &amp; Technology, contributing to its mechanical design, control system, and manipulator arm.</p>
+        <p>The team project combined rough-terrain mobility, remote manipulation, and an in-situ
+          testing unit for analyzing soil and air properties.</p>
+      </section>
+      <section class="experiment" aria-labelledby="rover-design">
+        <h2 id="rover-design">Rover Design</h2>
+        <div class="gallery">
+          <figure>
+            <img src="/images/durbar_1.png" alt="Team Durbar rover with custom wheels and a raised manipulator arm" width="989" height="763" loading="lazy" decoding="async">
+            <figcaption>Team Durbar’s rover.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/durbar_2.png" alt="Additional view of the KUET Mars rover" width="989" height="763" loading="lazy" decoding="async">
+            <figcaption>Another view of the rover.</figcaption>
+          </figure>
+        </div>
+        <p>The rover's chassis was constructed from stainless steel square pipes. A rocker-bogie
+          mechanism enabled it to navigate rough terrain, while four high-torque motors drove
+          custom-made wheels fitted with rubber tires for traction.</p>
+        <p>The manipulator arm was CNC-cut from aluminum sheets and used linear actuators as its
+          primary mechanism. Designed for lifting loads of around 5 kg, the arm could be operated
+          through either a radio transmitter or a base computer.</p>
+        <dl class="specifications">
+          <div><dt>Suspension</dt><dd>Rocker-bogie</dd></div>
+          <div><dt>Drive motors</dt><dd>4</dd></div>
+          <div><dt>Arm lifting capacity</dt><dd>~5 kg</dd></div>
+        </dl>
+      </section>
+      <section class="experiment" aria-labelledby="control-system">
+        <h2 id="control-system">Control System</h2>
+        <p>An Arduino Mega controlled the drivetrain and manipulator arm. A Raspberry Pi served
+          as the master controller, handling decision-making and path planning, while
+          omnidirectional antennas supported communication with the rover.</p>
+        <p>The rover also included an in-situ testing unit capable of autonomously analyzing
+          soil and air properties.</p>
+      </section>
+      <section class="experiment" aria-labelledby="contributions">
+        <h2 id="contributions">My Contributions</h2>
+        <ul>
+          <li>Led the design and construction of the rover using a rocker-bogie mechanism.</li>
+          <li>Led the control system and software sub-team in developing and implementing the rover's drive system.</li>
+          <li>Designed and constructed the manipulator arm for lifting approximately 5 kg.</li>
+        </ul>
+      </section>
+      <section class="experiment" aria-labelledby="video">
+        <h2 id="video">Video</h2>
+        <div style="display: flex; justify-content: center; width: 100%; max-width: 100%;">
+          <div style="position: relative; width: 100%; max-width: 560px; padding-bottom: min(56.25%, 315px);">
+            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/DxiYWCe7TLI?si=JdUHdafNvIdv9A9Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p><a href="/">Md Miraj Arefin</a> &middot; <a href="https://github.com/MirajArefin">GitHub</a></p>
+    <!-- <p>Page design adapted from the <a href="https://ca-ic.github.io/">Contact-Aware Impedance Control project page</a>.</p> -->
+  </footer>
 </body>
 
 </html>

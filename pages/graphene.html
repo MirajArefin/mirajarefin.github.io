@@ -1,96 +1,544 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Md Miraj Arefin">
+  <meta name="description"
+    content="Flash Joule heating research toward turbostratic graphene from carbon black: a custom setup, approximately 100 mg per batch, and Raman characterization of six spectra.">
+  <title>Flash Graphene Synthesis in Bulk Quantity | Md Miraj Arefin</title>
+  <link rel="canonical" href="https://mirajarefin.github.io/pages/graphene.html">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700|Noto+Sans:400,600,700&amp;display=swap"
+    rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-E00L9PT3V9');
   </script>
-  <title>Miraj Arefin</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    body {
+      margin: 0;
+      color: #4a4a4a;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
 
-  <meta name="author" content="{{ site.name }}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    a {
+      color: #209cee;
+      text-decoration: none;
+    }
 
-  <link rel="stylesheet" type="text/css" href="/style.css" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    a:hover {
+      text-decoration: underline;
+    }
 
+    a:focus-visible {
+      outline: 3px solid #00a398;
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(100% - 3rem, 960px);
+      margin-inline: auto;
+    }
+
+    .hero {
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    h1,
+    .project-authors {
+      font-family: 'Google Sans', sans-serif;
+    }
+
+    h1 {
+      margin: 0 0 1.5rem;
+      color: #363636;
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 1.125;
+      overflow-wrap: break-word;
+    }
+
+    .project-authors {
+      margin: 0 0 .75rem;
+      font-size: 1.25rem;
+    }
+
+    .supervisor {
+      max-width: 760px;
+      margin: 0 auto .75rem;
+    }
+
+    .timeline {
+      margin: 0;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .5rem;
+      margin-top: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: .5rem 1.25rem;
+      border-radius: 999px;
+      background: #363636;
+      color: #fff;
+    }
+
+    .button:hover {
+      background: #292929;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 3rem 0;
+    }
+
+    .content {
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    h2 {
+      color: #363636;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.3;
+      text-align: center;
+      margin: 0 0 1.5rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    .experiment {
+      padding-top: 3.5rem;
+    }
+
+    .experiment h2 {
+      font-size: 1.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .experiment h2::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      margin: 1.25rem auto 0;
+      background: #00a398;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+      align-items: start;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    img,
+    video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      margin-top: 1rem;
+      font-size: .95rem;
+      text-align: center;
+    }
+
+    .specifications {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      padding: 1.5rem 0;
+      margin: 2rem 0;
+      border-block: 1px solid #e5e5e5;
+      text-align: center;
+    }
+
+    .specifications dt {
+      font-size: .875rem;
+    }
+
+    .specifications dd {
+      margin: .5rem 0 0;
+      color: #363636;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 1.5rem;
+      background: #fafafa;
+      text-align: center;
+      font-size: .875rem;
+    }
+
+    footer p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 2.5rem 0 1.5rem;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      main {
+        padding: 2rem 0;
+      }
+
+      .experiment {
+        padding-top: 2.5rem;
+      }
+
+      .experiment h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .gallery,
+      .specifications {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .raman-results h3 {
+      margin: 2rem 0 1rem;
+      color: #363636;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    .raman-finding {
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0 2rem;
+      border-left: 4px solid #00a398;
+      background: #f3faf9;
+    }
+
+    .raman-finding h3 {
+      margin-top: 0;
+    }
+
+    .raman-finding p:last-child {
+      margin-bottom: 0;
+    }
+
+    .raman-figure {
+      margin: 2rem 0 2.5rem;
+    }
+
+    .raman-figure figcaption {
+      text-align: left;
+    }
+
+    .raman-table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .raman-table-wrap:focus-visible {
+      outline: 3px solid #00a398;
+      outline-offset: 3px;
+    }
+
+    .raman-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .875rem;
+    }
+
+    .raman-table caption {
+      text-align: left;
+      margin-bottom: .75rem;
+      font-weight: 600;
+    }
+
+    .raman-table th,
+    .raman-table td {
+      padding: .75rem .65rem;
+      text-align: right;
+      white-space: nowrap;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .raman-table thead {
+      background: #f5f7f7;
+    }
+
+    .raman-table th:first-child {
+      text-align: left;
+    }
+
+    .raman-note {
+      font-size: .875rem;
+    }
+
+    .raman-methods {
+      margin: 1.5rem 0;
+      padding: 1rem 1.25rem;
+      border: 1px solid #ddd;
+      border-radius: .25rem;
+    }
+
+    .raman-methods summary {
+      cursor: pointer;
+      color: #363636;
+      font-weight: 600;
+    }
+
+    .raman-methods summary:focus-visible {
+      outline: 3px solid #00a398;
+      outline-offset: 4px;
+    }
+
+    .raman-methods[open] summary {
+      margin-bottom: 1rem;
+    }
+
+    .raman-methods p:last-child {
+      margin-bottom: 0;
+    }
+
+    .raman-downloads {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem 1.5rem;
+      margin-top: 2rem;
+      font-size: .9rem;
+    }
+  </style>
 </head>
 
 <body>
-  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr style="padding:0px;vertical-align:middle;">
-            <h1 style="text-align: center;">
-                Flash Graphene Synthesis in Bulk Quantity
-            </h1>
-            <p><strong>Project Supervisor:</strong> Dr. Md. Abdullah Al-Bari, Department of Mechanical
-                Engineering, King Fahd University of Petroleum and Minerals, Saudi Arabia</p>
-                          
-            <p><strong>Timeline:</strong> March 2022 - Present</p>
-                          
-            <p style="text-align: justify;"><strong>About Project:</strong> My supervisor asked me if I can build such machine to produce graphene in bulk
-                quantity when he was doing his postdoc in University of Calgary, Canada. A research team from
-                Rice university, USA under supervision of Dr. James M. Tour first introduced this method of flash
-                graphene production.</p>
-          </tr>
+  <header class="hero">
+    <div class="container">
+      <h1>Flash Graphene Synthesis in Bulk Quantity</h1>
+      <p class="project-authors"><a href="/">Md Miraj Arefin</a></p>
+      <p class="supervisor"><strong>Project Supervisor:</strong> Dr. Md. Abdullah Al-Bari<br>
+        University of Calgary, Canada</p>
+      <p class="timeline">March 2022 &ndash; September 2023</p>
+      <nav class="project-links" aria-label="Project sections">
+        <a class="button" href="#overview">Overview</a>
+        <a class="button" href="#experiment-video">Video</a>
+        <a class="button" href="#experimental-setup">Experimental Setup</a>
+        <a class="button" href="#results">Results</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <div class="content">
+      <section aria-labelledby="overview">
+        <h2 id="overview">Overview</h2>
+        <p>I built a flash Joule heating system to investigate graphene synthesis from carbon black.
+          Brief electrical pulses rapidly heat and cool the feedstock, yielding approximately
+          100 mg of material per batch. Raman measurements show graphitic carbon with possible
+          turbostratic character; confirming the layer structure remains a next step.</p>
+      </section>
 
-          <tr style="padding:0px">
-            <td style="padding:1.5%;width:50%;vertical-align:middle">
-              <img style="width:100%;max-width:100%" alt="graphene_1.png" src="/images/graphene_1.png">
-            </td>
-            <td style="padding:1.5%;width:50%;vertical-align:middle">
-              <img style="width:100%;max-width:100%" alt="graphene_2.png" src="/images/graphene_2.png">
-            </td>
-          </tr>
-          
-        </table>
+      <section class="experiment" aria-labelledby="experimental-setup">
+        <h2 id="experimental-setup">Experimental Setup</h2>
+        <div class="gallery">
+          <figure>
+            <img src="/images/graphene_setup.png"
+              alt="Photograph of the custom-built flash graphene synthesis apparatus" loading="lazy" decoding="async">
+            <figcaption>Flash graphene synthesis setup.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/graphene_2.png" alt="Additional photograph of the flash graphene synthesis apparatus"
+              loading="lazy" decoding="async">
+            <figcaption>Another view of the experimental apparatus.</figcaption>
+          </figure>
+        </div>
+        <p>A custom AC&ndash;DC converter charges the capacitor bank, and an Arduino controls the
+          discharge switch. Carbon black sits between copper electrodes in a quartz tube,
+          where rapid heating to approximately 3,000 K is followed by rapid cooling.</p>
+        <dl class="specifications">
+          <div>
+            <dt>Capacitor bank</dt>
+            <dd>70 mF</dd>
+          </div>
+          <div>
+            <dt>Charging voltage</dt>
+            <dd>Up to 300 V DC</dd>
+          </div>
+          <div>
+            <dt>Switch on-time</dt>
+            <dd>~30 ms</dd>
+          </div>
+        </dl>
+      </section>
+      <section class="experiment" aria-labelledby="experiment-video">
+        <h2 id="experiment-video">Experiment Video</h2>
+        <video controls playsinline preload="metadata" aria-labelledby="experiment-video">
+          <source src="/videos/graphene_exp.mp4" type="video/mp4">
+          Your browser does not support embedded video.
+          <a href="/videos/graphene_exp.mp4">Download the experiment video</a>.
+        </video>
+      </section>
+      <section class="experiment raman-results" aria-labelledby="results">
+        <h2 id="results">Production &amp; Raman Characterization</h2>
+        <div class="raman-finding">
+          <p>Six spectra show strong D and G bands and a weaker, broad 2D band, indicating
+            disordered or edge-rich graphitic carbon. The 2D profile is compatible with
+            turbostratic material but does not establish its stacking or layer count.</p>
+        </div>
+        <p>The spectra below use local background subtraction and normalization to the fitted
+          G-peak height, without smoothing.</p>
 
+        <figure class="raman-figure">
+          <a href="/images/graphene_raman/dg_background_removed.svg"
+            aria-label="Open the D and G band plot at full size">
+            <img src="/images/graphene_raman/dg_background_removed.svg" width="900" height="520"
+              alt="Six Raman spectra after local background subtraction and G-peak normalization, showing D near 1335 and G near 1575 inverse centimeters."
+              loading="lazy" decoding="async">
+          </a>
+          <figcaption><strong>D and G bands.</strong> Fitted D/G peak-height ratio: 1.06&ndash;1.15.</figcaption>
+        </figure>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <p style="text-align: justify;">
-                The machine operates on the principle of high-voltage electric discharge over
-a very short duration. A capacitor bank with a capacitance of 70 mF serves as
-the primary power source for the discharge. The capacitor bank is charged up to 300V DC using a
-custom-built AC-DC converter. An Arduino microcontroller regulates the magnetic switch, which
-controls the main power supply. The switch remains on for approximately 30 milliseconds before
-turning off.</p>
-            <p style="text-align: justify;">
-                The feedstock material is placed between copper electrodes within a quartz tube. When the
-machine discharges the high voltage through the material, the temperature rapidly rises to around
-3000K and then cools down quickly—this rapid heating and cooling are critical for producing flash
-graphene.
-            </p>
-            <p style="text-align: justify;">
-                Currently, the machine can produce approximately 100 mg of turbostratic graphene per batch,
-using carbon black as the feedstock material. The long-term goal is to scale up the production of
-flash graphene.
-            </p>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:center;font-size:small;">
-                Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
-              </p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+        <figure class="raman-figure">
+          <a href="/images/graphene_raman/2d_background_removed.svg" aria-label="Open the 2D band plot at full size">
+            <img src="/images/graphene_raman/2d_background_removed.svg" width="900" height="520"
+              alt="Six background-subtracted 2D bands centered near 2662 to 2667 inverse centimeters, with fitted widths of 99 to 121 inverse centimeters and heights around one-quarter to one-third of G."
+              loading="lazy" decoding="async">
+          </a>
+          <figcaption><strong>2D band.</strong> Fitted 2D/G peak-height ratio: 0.25&ndash;0.34.</figcaption>
+        </figure>
+
+        <h3>Peak measurements</h3>
+        <div class="raman-table-wrap" role="region" aria-labelledby="raman-table-caption" tabindex="0">
+          <table class="raman-table">
+            <caption id="raman-table-caption">Approximate fitted parameters for the six spectra</caption>
+            <thead>
+              <tr>
+                <th scope="col">Spectrum</th>
+                <th scope="col">D center<br>(cm<sup>&minus;1</sup>)</th>
+                <th scope="col">G center<br>(cm<sup>&minus;1</sup>)</th>
+                <th scope="col">2D center<br>(cm<sup>&minus;1</sup>)</th>
+                <th scope="col">2D FWHM<br>(cm<sup>&minus;1</sup>)</th>
+                <th scope="col">I<sub>D</sub>/I<sub>G</sub></th>
+                <th scope="col">I<sub>2D</sub>/I<sub>G</sub></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">dark-1</th>
+                <td>1333</td>
+                <td>1576</td>
+                <td>2662</td>
+                <td>101</td>
+                <td>1.14</td>
+                <td>0.25</td>
+              </tr>
+              <tr>
+                <th scope="row">dark-2</th>
+                <td>1333</td>
+                <td>1575</td>
+                <td>2662</td>
+                <td>99</td>
+                <td>1.15</td>
+                <td>0.25</td>
+              </tr>
+              <tr>
+                <th scope="row">dark-3</th>
+                <td>1335</td>
+                <td>1573</td>
+                <td>2665</td>
+                <td>108</td>
+                <td>1.06</td>
+                <td>0.34</td>
+              </tr>
+              <tr>
+                <th scope="row">dark-4</th>
+                <td>1335</td>
+                <td>1573</td>
+                <td>2665</td>
+                <td>106</td>
+                <td>1.06</td>
+                <td>0.34</td>
+              </tr>
+              <tr>
+                <th scope="row">dark-5</th>
+                <td>1337</td>
+                <td>1576</td>
+                <td>2666</td>
+                <td>121</td>
+                <td>1.07</td>
+                <td>0.27</td>
+              </tr>
+              <tr>
+                <th scope="row">dark-6</th>
+                <td>1337</td>
+                <td>1576</td>
+                <td>2667</td>
+                <td>118</td>
+                <td>1.07</td>
+                <td>0.27</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="raman-note">FWHM: full width at half maximum. Ratios use fitted peak heights,
+          not integrated areas; values depend on the background and fitting models.</p>
+
+        <details class="raman-methods">
+          <summary>Analysis method and limitations</summary>
+          <p>Unsmoothed data were fitted with Lorentzian peaks and a linear background:
+            two peaks over 1100&ndash;1800 cm<sup>&minus;1</sup> for D/G, and one over
+            2450&ndash;2850 cm<sup>&minus;1</sup> for 2D. Only the local background was subtracted.</p>
+          <p>A single-peak 2D model was favored in five of six spectra; the extra component in
+            dark-6 did not establish a resolved peak. Alternative fits gave 2D widths of
+            95&ndash;127 cm<sup>&minus;1</sup>, a sensitivity range rather than a confidence interval.</p>
+          <p>D&prime; was not fitted separately. Excitation wavelength and instrumental resolution
+            were unavailable, and stacking-sensitive bands were unresolved. No layer count,
+            defect dimensions, or turbostratic fraction can be inferred.</p>
+        </details>
+
+        <p>Next steps are higher-quality Raman measurements, microscopy and diffraction to verify
+          layer stacking, and increased production capacity.</p>
+
+        <!-- <nav class="raman-downloads" aria-label="Download Raman results">
+          <a href="/images/graphene_raman/peak_metrics.csv" download>Peak measurements (CSV)</a>
+          <a href="/images/graphene_raman/background_removed_data.csv" download>Plotted data (CSV)</a>
+          <a href="/images/graphene_raman/dg_background_removed.pdf" download>D/G plot (PDF)</a>
+          <a href="/images/graphene_raman/2d_background_removed.pdf" download>2D plot (PDF)</a>
+        </nav> -->
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p><a href="/">Md Miraj Arefin</a> &middot; <a href="https://github.com/MirajArefin">GitHub</a></p>
+    <!-- <p>Page design adapted from the <a href="https://ca-ic.github.io/">Contact-Aware Impedance Control project page</a>.</p> -->
+  </footer>
 </body>
 
 </html>

@@ -1,126 +1,346 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Md Miraj Arefin">
+  <meta name="description"
+    content="Design, construction, and flight testing of a modular fixed-wing VTOL aircraft for emergency medical vaccine supply, supported by a UGC Bangladesh research grant.">
+  <title>Fixed Wing VTOL for Emergency Medical Vaccine Supply | Md Miraj Arefin</title>
+  <link rel="canonical" href="https://mirajarefin.github.io/pages/vtol2.html">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700|Noto+Sans:400,600,700&amp;display=swap"
+    rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-E00L9PT3V9');
   </script>
-  <title>Miraj Arefin</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    body {
+      margin: 0;
+      color: #4a4a4a;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
 
-  <meta name="author" content="{{ site.name }}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    a {
+      color: #209cee;
+      text-decoration: none;
+    }
 
-  <link rel="stylesheet" type="text/css" href="/style.css" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    a:hover {
+      text-decoration: underline;
+    }
 
+    a:focus-visible {
+      outline: 3px solid #00a398;
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(100% - 3rem, 960px);
+      margin-inline: auto;
+    }
+
+    .hero {
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    h1,
+    .project-authors {
+      font-family: 'Google Sans', sans-serif;
+    }
+
+    h1 {
+      margin: 0 0 1.5rem;
+      color: #363636;
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 1.125;
+      overflow-wrap: break-word;
+    }
+
+    .project-authors {
+      margin: 0 0 .75rem;
+      font-size: 1.25rem;
+    }
+
+    .supervisor {
+      max-width: 760px;
+      margin: 0 auto .75rem;
+    }
+
+    .timeline {
+      margin: 0;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .5rem;
+      margin-top: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: .5rem 1.25rem;
+      border-radius: 999px;
+      background: #363636;
+      color: #fff;
+    }
+
+    .button:hover {
+      background: #292929;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 3rem 0;
+    }
+
+    .content {
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    h2 {
+      color: #363636;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.3;
+      text-align: center;
+      margin: 0 0 1.5rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    .experiment {
+      padding-top: 3.5rem;
+    }
+
+    .experiment h2 {
+      font-size: 1.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .experiment h2::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      margin: 1.25rem auto 0;
+      background: #00a398;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+      align-items: start;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      margin-top: 1rem;
+      font-size: .95rem;
+      text-align: center;
+    }
+
+    .specifications {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      padding: 1.5rem 0;
+      margin: 2rem 0;
+      border-block: 1px solid #e5e5e5;
+      text-align: center;
+    }
+
+    .specifications dt {
+      font-size: .875rem;
+    }
+
+    .specifications dd {
+      margin: .5rem 0 0;
+      color: #363636;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 1.5rem;
+      background: #fafafa;
+      text-align: center;
+      font-size: .875rem;
+    }
+
+    footer p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 2.5rem 0 1.5rem;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      main {
+        padding: 2rem 0;
+      }
+
+      .experiment {
+        padding-top: 2.5rem;
+      }
+
+      .experiment h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .gallery,
+      .specifications {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr style="padding:0px;vertical-align:middle;">
-            <h1 style="text-align: center;">
-              Fixed Wing VTOL for Emergency Medical Vaccine Supply
-            </h1>
-            <p><strong>Project Supervisor:</strong> Dr. Md. Ashraful Islam, Khulna University of Engineering &
-              Technology, Bangladesh.</p>
-                          
-            <p><strong>Timeline:</strong> September 2023 – March 2024</p>
-                          
-            <p style="text-align: justify;"><strong>About Project:</strong> My supervisor secured a research grant from the University Grants Commission
-                          (UGC) of Bangladesh for this project, and I was selected as a research assistant due to my prior
-                          experience in the field.</p>
-          </tr>
-
-          <tr style="padding:0px">
-            <td style="padding:1.5%;width:50%;vertical-align:middle">
-              <img style="width:100%;max-width:100%" alt="vtol2_1.png" src="/images/vtol2_1.png">
-            </td>
-            <td style="padding:1.5%;width:50%;vertical-align:middle">
-              <img style="width:100%;max-width:100%" alt="vtol2_2.png" src="/images/vtol2_2.png">
-            </td>
-          </tr>
-          
-        </table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td>
-              <p style="text-align: center;"><i>Fig. 1. Design of the UAV in SolidWorks</i></p>
-            </td>
-          </tr>
-        </table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr style="padding:0px">
-            <td style="padding:1.5%;width:50%;vertical-align:middle">
-              <img style="width:100%;max-width:100%" alt="vtol2_3.png" src="/images/vtol2_3.png">
-            </td>
-            <td style="padding:1.5%;width:50%;vertical-align:middle">
-              <img style="width:100%;max-width:100%" alt="vtol2_4.png" src="/images/vtol2_4.png">
-            </td>
-          </tr>
-          <tr style="padding:0px">
-            <td style="padding:1.5%;width:50%;vertical-align:middle">
-              <img style="width:100%;max-width:100%" alt="vtol2_5.png" src="/images/vtol2_5.png">
-            </td>
-            <td style="padding:1.5%;width:50%;vertical-align:middle">
-              <img style="width:100%;max-width:100%" alt="vtol2_6.png" src="/images/vtol2_6.png">
-            </td>
-          </tr>
-          
-        </table>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td>
-              <p style="text-align: center;"><i>Fig. 2. Flying Fixed-wing VTOL</i></p>
-            </td>
-          </tr>
-        </table>
-
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <p style="text-align: justify;">
-              The UAV was designed using SolidWorks 2023 and Blender3D, as shown in Fig. 1. The vehicle
-features a modular structure, allowing for easy disassembly and transportation. Its wings, fuselage,
-tail, and rudders can be individually detached. The frame was constructed using carbon fiber rods
-and plywood, with the plywood components cut into shape using a laser cutter. All mounting parts
-were 3D-printed using PLA, while the outer surface was made from Depron sheets. </p>
-            <p style="text-align: justify;">
-The initial version of the UAV encountered several design issues, which were addressed before its
-test flight (Fig. 2). The vehicle successfully took off in both stabilize and GPS-guided modes,
-reaching an altitude of approximately 30 meters in VTOL mode. It then transitioned smoothly into
-fixed-wing flight and landed in VTOL mode (video). The total flight time was about 5 minutes,
-entirely in VTOL mode.
-            </p>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:center;font-size:small;">
-                Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
-              </p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+  <header class="hero">
+    <div class="container">
+      <h1>Fixed Wing VTOL for Emergency Medical Vaccine Supply</h1>
+      <p class="project-authors"><a href="/">Md Miraj Arefin</a></p>
+      <p class="supervisor"><strong>Project Supervisor:</strong> Dr. Md. Ashraful Islam<br>
+        Khulna University of Engineering &amp; Technology, Bangladesh</p>
+      <p class="timeline">September 2023 &ndash; March 2024</p>
+      <nav class="project-links" aria-label="Project sections">
+        <a class="button" href="#overview">Overview</a>
+        <a class="button" href="#aircraft-design">Aircraft Design</a>
+        <a class="button" href="#aircraft-building">Aircraft Building</a>
+        <a class="button" href="#flight-tests">Flight Tests</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <div class="content">
+      <section aria-labelledby="overview">
+        <h2 id="overview">Overview</h2>
+        <p>This project focused on the development of a fixed-wing vertical take-off and landing (VTOL) aircraft specifically designed for the rapid aerial transport of medical vaccines. Supported by a research grant awarded by the University Grants Commission (UGC) of Bangladesh, I contributed as a research assistant, leveraging prior expertise in unmanned aerial systems.</p>
+        <p>The research scope encompassed the comprehensive design, fabrication, and rigorous flight testing of the aircraft, which featured a modular architecture optimized for efficient disassembly and logistical transport.</p>
+      </section>
+      <section class="experiment" aria-labelledby="aircraft-design">
+        <h2 id="aircraft-design">Aircraft Design</h2>
+        <p>The Unmanned Aerial Vehicle (UAV) was modeled employing SolidWorks 2023 and Blender3D. The structural design prioritized modularity; the wings, fuselage, tail section, and control surfaces were engineered for independent detachment, thereby facilitating streamlined logistical transport and rapid field assembly.</p>
+        <div class="gallery">
+          <figure>
+            <img src="/images/vtol2_1.png" alt="SolidWorks model of the fixed-wing VTOL aircraft" width="925"
+              height="546" loading="lazy" decoding="async">
+            <figcaption>UAV design in SolidWorks.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/vtol2_2.png" alt="Additional SolidWorks view of the fixed-wing VTOL aircraft" width="925"
+              height="546" loading="lazy" decoding="async">
+            <figcaption>Another view of the aircraft design.</figcaption>
+          </figure>
+        </div>
+        <p>The structural framework integrated carbon fiber rods with precision laser-cut plywood components. Essential mounting interfaces were fabricated via 3D printing utilizing Polylactic Acid (PLA), while Depron foam sheets were utilized to construct the aerodynamic outer fuselage.</p>
+      </section>
+      <section class="experiment" aria-labelledby="aircraft-building">
+        <h2 id="aircraft-building">Aircraft Building</h2>
+        <p>The aircraft's construction methodology employed a hybrid structural approach, integrating laser-cut plywood elements with high-strength carbon fiber reinforcements. This modular structural paradigm was instrumental in achieving both ease of assembly and enhanced portability.</p>
+        <div class="gallery">
+          <figure>
+            <img src="/images/vtol_lasercut_1.jpg" alt="Laser-cut plywood parts for the VTOL aircraft" width="925"
+              height="546" loading="lazy" decoding="async">
+            <figcaption>Laser-cut plywood components.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/vtol_lasercut_2.jpg" alt="Assembly of the laser-cut parts and carbon fiber rods"
+              width="925" height="546" loading="lazy" decoding="async">
+            <figcaption>Assembling the frame with carbon fiber rods.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/vtol_lasercut_3.jpg" alt="Further assembly of the VTOL aircraft structure" width="925"
+              height="546" loading="lazy" decoding="async">
+            <figcaption>Further progress on the aircraft assembly.</figcaption>
+          </figure>
+        </div>
+        <p>Custom mounting interfaces were additively manufactured using PLA to guarantee structural integrity and ensure a precise, low-tolerance fit for the integrated avionics and propulsion subsystems.</p>
+      </section>
+      <section class="experiment" aria-labelledby="flight-tests">
+        <h2 id="flight-tests">Flight Tests</h2>
+        <p>Preliminary design constraints identified during the initial prototyping phase were systematically resolved prior to flight testing. The aircraft successfully executed vertical take-off sequences in both stabilized and GPS-guided autonomous modes, achieving an operational altitude of approximately 30 meters. Subsequent flight trials demonstrated a stable transition into forward fixed-wing flight, followed by a controlled VTOL landing sequence.</p>
+        <p>Empirical flight data indicated an average endurance of approximately 5 minutes during sustained VTOL hover operations.</p>
+        <dl class="specifications">
+          <div>
+            <dt>VTOL test altitude</dt>
+            <dd>~30 m</dd>
+          </div>
+          <div>
+            <dt>VTOL flight duration</dt>
+            <dd>~5 min</dd>
+          </div>
+          <div>
+            <dt>Take-off modes tested</dt>
+            <dd>Stabilize &amp; GPS</dd>
+          </div>
+        </dl>
+        <div class="gallery">
+          <figure>
+            <img src="/images/vtol2_3.png" alt="Fixed-wing VTOL aircraft in flight, viewed from below" width="925"
+              height="546" loading="lazy" decoding="async">
+            <figcaption>The aircraft during flight testing.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/vtol2_4.png" alt="Airborne VTOL aircraft showing its wings, tail, and lift rotors"
+              width="925" height="546" loading="lazy" decoding="async">
+            <figcaption>Another view of the aircraft in flight.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/vtol2_5.png" alt="Completed VTOL aircraft on a stand at the outdoor test site"
+              width="1042" height="783" loading="lazy" decoding="async">
+            <figcaption>The assembled aircraft at the test field.</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/vtol2_6.png" alt="VTOL aircraft hovering with an operator holding a radio transmitter"
+              width="1042" height="783" loading="lazy" decoding="async">
+            <figcaption>VTOL testing at the field.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p><a href="/">Md Miraj Arefin</a> &middot; <a href="https://github.com/MirajArefin">GitHub</a></p>
+    <!-- <p>Page design adapted from the <a href="https://ca-ic.github.io/">Contact-Aware Impedance Control project page</a>.</p> -->
+  </footer>
 </body>
 
 </html>
