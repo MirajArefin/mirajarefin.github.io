@@ -2,7 +2,7 @@
 layout: post
 title:  "Contact-Aware Impedance Controller for Robot-Assisted Ultrasound Imaging"
 date:   2026-09-15 22:21:59 +00:00
-image: /images/ca-ic.jpeg
+image: /images/ca-ic.gif
 categories: Research
 author: "Md Miraj Arefin"
 authors: "<strong>Md Miraj Arefin</strong>, Mehmet Efe Tiryaki"
