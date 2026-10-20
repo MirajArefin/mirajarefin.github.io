@@ -7,6 +7,6 @@ categories: Research
 author: "Md Miraj Arefin"
 authors: "<strong>Md Miraj Arefin</strong>, Mehmet Efe Tiryaki"
 venue: "2027 IEEE International Conference on Robotics and Automation (ICRA) (Submitted)"
-# poster: /pdfs/koc_poster_2026.pdf
+pre-print: https://arxiv.org/abs/2609.34400
 project_page: https://ca-ic.github.io/
 ---
