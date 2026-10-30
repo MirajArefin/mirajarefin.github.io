@@ -22,6 +22,41 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
     type="text/css">
 
+  <style>
+    .featured-projects {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+      align-items: start;
+    }
+
+    .featured-projects a {
+      display: block;
+      min-width: 0;
+      text-align: center;
+    }
+
+    .featured-projects img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .featured-projects h3 {
+      display: block;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 600px) {
+      .featured-projects {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -61,6 +96,24 @@
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
               <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="images/miraj.jpeg">
+            </td>
+          </tr>
+        </table>
+
+        <table
+          style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Featured Projects</h2>
+              <div class="featured-projects">
+                {% assign featured_posts = site.posts | where_exp: "post", "post.image contains '.gif'" | slice: 0, 4 %}
+                {% for post in featured_posts %}
+                <a href="{{ post.project_page | default: post.poster | default: post.github | default: post.url }}">
+                  <img src="{{ post.image }}" alt="{{ post.title | escape }}" />
+                  <h3>{{ post.title }}</h3>
+                </a>
+                {% endfor %}
+              </div>
             </td>
           </tr>
         </table>
