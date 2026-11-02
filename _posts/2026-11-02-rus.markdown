@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Robotic Ultrasound System (Ongoing)"
+date:   2026-11-02 0:0:0 +00:00
+image: /images/rus.gif
+categories: Project
+author: "Md Miraj Arefin"
+project_page: /pages/rus.html
+---
+Developing a robotic ultrasound system for automated ultrasound scanning. 
