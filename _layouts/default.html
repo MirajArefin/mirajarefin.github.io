@@ -88,6 +88,14 @@
       color: #1772d0;
     }
 
+    .project-thumb {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
     @media (max-width: 600px) {
       .featured-projects {
         grid-template-columns: 1fr;
@@ -175,7 +183,7 @@
           {% if cat == 'Research' %}
           <tr{% if post.project_page %} class="project-row-linked" data-href="{{ post.project_page }}"{% endif %}>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              <img class="project-thumb" src="{{post.image}}" alt="project image" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
@@ -241,7 +249,7 @@
           {% if cat == 'Project' %}
           <tr{% if post.project_page %} class="project-row-linked" data-href="{{ post.project_page }}"{% endif %}>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              <img class="project-thumb" src="{{post.image}}" alt="project image" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>
