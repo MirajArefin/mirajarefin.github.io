@@ -34,7 +34,18 @@
     .featured-projects a {
       display: block;
       min-width: 0;
+      padding: 12px;
+      border: 1px solid transparent;
+      border-radius: 10px;
       text-align: center;
+      transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .featured-projects a:hover,
+    .featured-projects a:focus-visible {
+      background-color: #f4f8fd;
+      border-color: #d0e2f7;
+      box-shadow: 0 4px 14px rgba(23, 114, 208, 0.12);
     }
 
     .featured-projects img {
@@ -42,12 +53,39 @@
       width: 100%;
       aspect-ratio: 4 / 3;
       object-fit: cover;
+      border-radius: 6px;
     }
 
     .featured-projects h3 {
       display: block;
       margin-top: 10px;
       line-height: 1.4;
+    }
+
+    tr.project-row-linked {
+      cursor: pointer;
+    }
+
+    tr.project-row-linked td {
+      transition: background-color 0.2s ease;
+    }
+
+    tr.project-row-linked td:first-child {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    tr.project-row-linked td:last-child {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    tr.project-row-linked:hover td {
+      background-color: #f4f8fd;
+    }
+
+    tr.project-row-linked:hover h3 {
+      color: #1772d0;
     }
 
     @media (max-width: 600px) {
@@ -135,7 +173,7 @@
           {% for post in site.posts %}
           {% for cat in post.categories %}
           {% if cat == 'Research' %}
-          <tr>
+          <tr{% if post.project_page %} class="project-row-linked" data-href="{{ post.project_page }}"{% endif %}>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
@@ -201,7 +239,7 @@
           {% for post in site.posts %}
           {% for cat in post.categories %}
           {% if cat == 'Project' %}
-          <tr>
+          <tr{% if post.project_page %} class="project-row-linked" data-href="{{ post.project_page }}"{% endif %}>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
@@ -277,6 +315,22 @@
       </td>
     </tr>
   </table>
+  <script>
+    document.querySelectorAll('tr.project-row-linked[data-href]').forEach(function (row) {
+      row.addEventListener('click', function (e) {
+        if (e.target.closest('a')) return;
+        var sel = window.getSelection && window.getSelection().toString();
+        if (sel) return;
+        var href = row.getAttribute('data-href');
+        if (!href) return;
+        if (e.ctrlKey || e.metaKey) {
+          window.open(href, '_blank');
+        } else {
+          window.location.href = href;
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
